@@ -8,6 +8,19 @@ body {
   opacity: 0.9;
 }
 
+/*All the headings seems to have the same styling on the page, so styling them universally here */
+h2, h4 {
+  color: seashell;
+}
+
+h2 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 25px;
+}
+/* Header */
 header {
   height: 69px;
   border-bottom: 1px solid seashell;
@@ -40,4 +53,20 @@ padding-right: 10px;
 header a {
   color: seashell;
   font-size: 22px;
+}
+
+/* Jumbotron, aka the big picture display */
+.jumbotron {
+  background: url("../images/img-mission-background.jpg");
+  min-height: 700px;
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+}
+.headline {
+  text-align: center;
+  background-color: black;
+  opacity: 1;
+  width: 1200px;
 }
