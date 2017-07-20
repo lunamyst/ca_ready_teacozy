@@ -9,7 +9,7 @@ body {
 }
 
 /*All the headings seems to have the same styling on the page, so styling them universally here */
-h2, h4 {
+h2, h4, h3, p, h5 {
   color: seashell;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -19,8 +19,19 @@ h2 {
   font-size: 35px;
 }
 
+h3{
+  font-size: 30px;
+}
 h4 {
   font-size: 25px;
+}
+
+p {
+  font-size: 22px;
+}
+
+h5 {
+  font-size: 18px;
 }
 /* Header */
 header {
@@ -90,7 +101,9 @@ header a {
 .catalog {
   margin-top: 30px;
   width: 1000px;
-  border: 1px solid white;
+/*Use this border to debug positioning issues so you can see the borders of the div */
+/*  border: 1px solid white; */
+
   /*To center the child divs that contain the content inside this larger catalog div */
   display: flex;
   flex-direction: column;
@@ -107,7 +120,7 @@ header a {
   display:flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .tea-list img {
@@ -119,4 +132,68 @@ header a {
   display: inline-flex;
   flex-direction: column;
   align-items: center;
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+/*Locations section */
+.locations {
+/*Use this border to debug positioning issues so you can see the borders of the div */
+/*  border: solid 1px white; */
+  min-height: 500px;
+  width: 1200px;
+  margin-top: 20px;
+  background: url("../images/img-locations-background.jpg");
+
+/*Positioning the midsized divs (i.e. #locations-heading and .locations-list) */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+.locations-list {
+  /*Use this border to debug positioning issues so you can see the borders of the div */
+/*  border: solid 1px white; */
+  display: flex;
+  flex-direction: row;
+  width: 980px;
+  min-height: 300px;
+  justify-content: space-between;
+  /* Spec is 15x between locations heading and .locations-list. Locations heading already has 10px margin bottom. */
+  margin-top: 5px;
+}
+.location-item {
+  background-color: black;
+  opacity: 1;
+  width: 300px;
+/* To position the text within the black boxes */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+footer, .copyright, .contact-info {
+  /*Use this border to debug positioning issues so you can see the borders of the div */
+  /* border: solid 1px white; */
+}
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+}
+.contact-info {
+  min-height: 200px;
+  margin: 0 auto;
+/* Make a flex box in order to position text within the div */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright {
+  margin-left: 20px;
 }
